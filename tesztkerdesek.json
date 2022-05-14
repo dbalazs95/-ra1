@@ -77,7 +77,7 @@
                  "valasz3": "évente cserélem",
                  "helyesvalasz": "valasz2"
                 }],
-"Kozep_isk" : [
+"kozep_isk" : [
                 {
                  "kerdes": "1. Hogyan dobjuk a szelektívbe a műanyagot?",
                  "valasz1": "Koszosan",
@@ -156,7 +156,7 @@
                  "valasz3": "erősebb műanyagból készült szatyrok",
                  "helyesvalasz": "valasz1"
                  }],
-"Felnőtt":[
+"felnott":[
                 {
                  "kerdes": "1. Található-e Magyarországon (műanyag) csomagolás mentes bolt?",
                  "valasz1": " Igen, van",
