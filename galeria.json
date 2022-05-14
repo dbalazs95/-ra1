@@ -1,0 +1,34 @@
+{
+    "galeria" : [
+        {
+            "Szerző": "Molnár Dávid",
+            "Fotós": "Balla Soma Dávid",
+            "Modell": "Varga Réka",
+            "kép1" : "kepek/galeria_kepek/balla_soma/bs1",
+            "kép2" : "kepek/galeria_kepek/balla_soma/bs2",
+            "kép3" : "kepek/galeria_kepek/balla_soma/bs3",
+            "main_kép1" : "kép1"
+
+        },
+        {
+            "Szerző": "Molnár Dávid",
+            "Fotós": "Fehér Szebasztián",
+            "Modell": "Sipos Vivien",
+            "kép4" : "kepek/galeria_kepek/feher_szebi/fsz1",
+            "kép5" : "kepek/galeria_kepek/feher_szebi/fsz2",
+            "kép6" : "kepek/galeria_kepek/feher_szebi/fsz3",
+            "main_kép2" : "kép4"
+
+        },
+        {
+            "Szerző": "Molnár Dávid",
+            "Fotós": "Gáll Regina",
+            "Modell": "Kiss Eszter",
+            "kép7" : "kepek/galeria_kepek/gall_regina/gr1",
+            "kép8" : "kepek/galeria_kepek/gall_regina/gr2",
+            "kép9" : "kepek/galeria_kepek/gall_regina/gr3",
+            "main_kép3" : "kép7"
+
+        },
+    ]
+}
