@@ -2,44 +2,75 @@ window.addEventListener("load", init);
 function $(elem) {
   return document.querySelectorAll(elem);
 }
-var valasztas = ";"
-const kerdesek = [];
 
+
+const kerdesek = [];
+var txt = ""
 function init() {
-    valaszt();
-  beolvas(kerdesek, valasztas);
+  var valasztas = "";
+  var gombok = document.getElementsByClassName('button');
+  var gomb = Array.from(gombok)
+  for (let index = 0; index < gomb.length; index++) {
+      gomb[index].addEventListener("click", kattint);
+  }
+
+  //teszt(kerdesek)
 }
 
-function beolvas(tomb, kulcs) {
-  fetch("tesztkerdesek.json")
+function teszt(tomb){
+    console.log(tomb);
+    var txt = '<form id="teszt>'
+    tomb.forEach(function (kerdes){
+      console.log(kerdes)
+      for (const key in kerdes) {
+        if (key.includes("kerdes")) {
+          txt += `<h3 id="kerdes">${kerdes[key]}</h3>`
+        }else if (key.includes("valasz")) {
+          txt += `<input id="valasz" type="radio" name="1" value="${key}">${kerdes[key]}<br>`
+        }else if (key.includes("helyes")) {
+          txt+= `<input id="valasz" type="radio" name="1" value="${key}">${kerdes[key]}<br>`
+        }       
+      }
+      txt += '<input type="submit" value="Submit"></form>'
+      $("article")[0].innerHTML = txt
+    })
+}
+
+function kattint(event){
+
+  if (event.target.nodeName === "BUTTON") {
+    valasztas = event.target.id
+  }
+console.log(valasztas)
+
+let kerdes = "tesztkerdesek.json"
+  fetch(kerdes)
     .then((res) => res.json())
     .then((data) => {
-      data[kulcs].forEach((elem) => {
-        tomb.push(elem);
+      console.log(data)
+      data[valasztas].forEach((elem) => {
+        kerdesek.push(elem);
       });
-      console.log(tomb);
+      console.log(kerdesek);
+      txt += '<div><form id="teszt>'
+    console
+    kerdesek.forEach(function (kerdes){
+      console.log(kerdes)
+      for (const key in kerdes) {
+        if (key.includes("kerdes")) {
+          txt += `<h3 id="kerdes">${kerdes[key]}</h3>`
+        }else if (key.includes("valasz")) {
+          txt += `<input id="valasz" type="radio" name="1" value="${key}">${kerdes[key]}<br>`
+        }
+      }
+      
+    })
+    txt += '<input type="submit" value="Submit"></form></div>'
+      $("article")[0].innerHTML = txt
     })
     .catch((err) => {
       console.log(err);
     });
-}
-function valaszt(){
-    var gombok = document.querySelectorAll('button');
-    console.log(gombok)
-    gombok.onclick = function() {
-        gombok.forEach(function(gomb){
-            if (gomb.getelementbyID.includes("alt")) {
-                valasztas = "alt_isk"
-                return valasztas
-            }
-            else if (gomb.getelementbyID.includes("kozep")) {
-                valasztas = "kozep_isk"
-                return valasztas
-            }
-            else if (gomb.getelementbyID.includes("felnott")) {
-                valasztas = "felnott"
-                return valasztas
-            }
-    })
-}
+
+     
 }

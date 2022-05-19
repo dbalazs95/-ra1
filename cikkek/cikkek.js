@@ -25,23 +25,23 @@ function init() {
 }
  function feldolgoz(cikkek) {
      console.log(cikkek)
-     var txt = "";
+     var txt = '<div id="cikk">';
         cikkek.forEach(function (cikk){
             console.log(cikk)
-            txt += "<br>";
             for (const key in cikk) {
                 if(key.includes("cim")){
-                    txt += `<div><h1>${cikk[key]}</h1></div>`
+                    txt += `<h1>${cikk[key]}</h1>`
                 }else if (key.includes("szov")){
-                    txt += `<div><p>${cikk[key]}</p></div>`
+                    txt += `<p>${cikk[key]}</p>`
                 }else if (key.includes("al")){
-                    txt += `<div><h3>${cikk[key]}</h3></div>`
+                    txt += `<h3>${cikk[key]}</h3>`
                 }else if(key.includes("kep")){
                     txt += `<img src="${cikk[key]}" alt="">`
 
                 }                
             }
         })
+    txt += "</div>"
      $("article")[0].innerHTML = txt
  }
 
