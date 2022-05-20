@@ -1,0 +1,30 @@
+body {
+  position: absolute;
+  width: 100vw;
+  background-image: url("main/water2.jpg");
+  background-size: cover;
+}
+header {
+  text-align: center;
+}
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+}
+#article,
+#gallery,
+#test,
+#game {
+  background: white;
+  width: 300px;
+  height: 300px;
+  margin-bottom: 100px;
+  border-radius: 50px;
+  margin: auto;
+}
+main img {
+  display: block;
+  margin: auto;
+  width: 90%;
+}
