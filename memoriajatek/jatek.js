@@ -48,7 +48,7 @@ function kepek(forrasok) {
       "card" +
       '" id="' +
       index +
-      '"><div class="front"><img src="" alt=""></div><div class="back"><img src="' +
+      '"><div class="front"><img src="kepek/hatlap.jpg" alt=""></div><div class="back"><img src="' +
       srcs[index] +
       '" alt=""></div></div>';
   }
