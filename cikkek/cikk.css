@@ -14,15 +14,26 @@ img {
     width: 80%;
 
 }
-nav li {
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
-    display: inline;
-}
-nav a, nav a:visited {
-    color: pink;
-    text-decoration: none;
-    font-size: larger;
-}
-nav a:hover {
-    color: yellowgreen;
-}
+  }
+  
+  li a:hover {
+    background-color: #111;
+  }
