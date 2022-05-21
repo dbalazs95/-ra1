@@ -35,10 +35,10 @@ function kattint(event){
         
         for (const key in kerdes) {
           if (key.includes("kerdes")) {
-            txt += `<h3 id="kerdes">${kerdes[key]}</h3><br>`
+            txt += `<h3 class="kerdes">${kerdes[key]}</h3><br>`
             i++;
           }else if (key.includes("valasz")) {
-            txt += `<input id="valasz" type="radio" name="${i}.kerdes" value="${key}">${kerdes[key]}<br>`
+            txt += `<input class="valasz" type="radio" name="${i}.kerdes" value="${key}">${kerdes[key]}<br>`
           }
         }
         
