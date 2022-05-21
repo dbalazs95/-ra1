@@ -95,7 +95,7 @@ function toggle() {
     //   spans[Math.floor(Math.random()*spans.length)].style.fontSize = sizes[Math.floor(Math.random()*sizes.length)];
       
     // }, 200)
-    document.getElementById("title").innerHTML = "<h1>Győztél</h1>"
+    alert("Szép munka, győztél!")
     
     
   };
